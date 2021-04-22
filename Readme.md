@@ -4,11 +4,13 @@
 
 
 
-## Link to live app
-[Our web app](https://csci5828app.herokuapp.com/)
+
 
 # CSCI 5828 Project (QXAAD)
 
+
+## Link to live app
+[Our web app](https://csci5828app.herokuapp.com/)
 
 ## Prerequisites
 
@@ -58,4 +60,9 @@ npm run start
 ## Used api sources:
 [Github trending repo](https://www.npmjs.com/package/trending-github)
 [Random image](https://source.unsplash.com/)
+
+
+
+## Team members:
+Ange Ishimwe, Qiuyang Wang, Xinyu Jiang, Duanfeng Gao, Ann Marie Mahon
 
