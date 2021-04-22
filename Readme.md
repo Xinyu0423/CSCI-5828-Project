@@ -4,6 +4,9 @@
 
 
 
+## Link to live app
+[Our web app](https://csci5828app.herokuapp.com/)
+
 # CSCI 5828 Project (QXAAD)
 
 
@@ -47,3 +50,12 @@ npm install\
 npm run build\
 npm run dev  (for testing)\
 npm run start  
+
+
+## Our development github repo can be found here:
+[QXAAD Dev repo](https://github.com/kevgao/csci5828/tree/dev)
+
+## Used api sources:
+[Github trending repo](https://www.npmjs.com/package/trending-github)
+[Random image](https://source.unsplash.com/)
+
