@@ -1,0 +1,46 @@
+task clean(type:Delete){
+    delete '.next'
+}
+
+task clear(type:Delete){
+    dependsOn clean
+    delete 'node_modules'
+}
+
+task setup(){
+    description 'Set up Node environment'
+    dependsOn clean
+    doLast{
+        exec{
+            commandLine "npm", "install"
+        }
+    }
+}
+
+task build(){  
+    dependsOn setup 
+    doLast{
+        if (System.getenv("ENVIRONMENT")=="production"){ 
+            logger.quiet("Building production")
+            exec{
+                commandLine "npm", "run", "build"
+            }
+            
+        }else{
+            exec{
+                commandLine "npm", "run", "build"
+            }
+        }
+    }
+}
+
+task test(){
+    dependsOn setup
+    doLast{
+        exec{
+            commandLine "npm", "test"
+        }
+
+    }
+    
+}

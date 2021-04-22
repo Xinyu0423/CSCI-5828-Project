@@ -1,0 +1,74 @@
+plugins{
+    id 'com.palantir.docker' version '0.26.0'
+    id "com.palantir.docker-run" version "0.26.0"
+    id 'com.palantir.docker-compose' version '0.26.0'
+}
+
+// get database credentials
+if(System.getenv('ENVIRONMENT')=="production"){
+    project.ext.set("database", System.getenv('DATABASE_URL'))
+}else{
+    project.ext.set("database", "http://localhost")
+}
+
+project.buildDir = './build'
+version = '0.1.0'
+
+task clean(type:Delete){
+    dependsOn ':app:clean'
+    dependsOn ':api:clean'
+}
+
+task clear(type:Delete){
+    dependsOn clean
+    dependsOn ':app:clear'
+    dependsOn ':api:clear'
+}
+
+task setup(){
+    description 'Setup Python and Node environments'
+    dependsOn ':app:setup'
+    dependsOn ':api:setup'
+    doLast{
+        println "Environments Ready."
+    }
+}
+
+task assemble(){
+    mustRunAfter clean
+    dependsOn ':app:build'
+    doLast{
+        println "Success."
+    }
+
+}
+
+
+task test{
+    dependsOn ':app:test'
+    //dependsOn ':tests:tox'
+    doLast{
+        println "Tests Done."
+    }
+}
+
+
+task build(){
+    description 'Project build'
+    dependsOn assemble
+    doLast{
+        println "Project Built."
+    }
+}
+
+dockerCompose{
+    dockerComposeFile 'docker-compose.yml'
+}
+
+dockerRun{
+    name "${project.name}"
+    image "${project.name}:${project.version}"
+    env 'PORT':'8000'
+    ports '8080:8000'  // host port : container port
+    clean true
+}

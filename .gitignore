@@ -1,0 +1,17 @@
+build
+__pycache__
+# Ignore Gradle project-specific cache directory
+.gradle
+.DS_Store
+.vscode
+.venv
+.project
+.settings
+app/static
+
+node_modules
+.tox
+*.db
+
+.env
+.next

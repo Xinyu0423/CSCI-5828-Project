@@ -1,0 +1,5 @@
+{
+    "name":"Ark",
+    "image":"ghcr.io/kevgao/ark:web",
+    "extensions": ["ms-python.python"]
+}

@@ -1,0 +1,25 @@
+
+task clean(type:Delete){
+    delete '.tox'
+}
+
+task clear(type:Delete){
+    delete '.tox'
+}
+
+task setup{
+    dependsOn clean
+    doLast{
+        println "setup tests"
+    }
+}
+
+task tox{
+    dependsOn setup
+    doLast{
+        exec{
+            workingDir './'
+            commandLine "tox", "-q"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+task clean(type:Delete){
+    delete 'static'
+    delete '__pycache__'
+}
+
+task clear(type:Delete){
+    dependsOn clean
+    delete '.venv'
+}
+
+task setup(){
+    description 'Setup API server environment'
+    doLast{
+        mkdir '.venv'
+        exec{
+            workingDir './'
+            def envtag = '--dev'
+            if(System.getenv('ENVIRONMENT')=="production"){
+                envtag = ''
+            }
+            commandLine "pipenv","install", envtag
+        }
+    }
+}
