@@ -8,6 +8,22 @@
 
 # CSCI 5828 Project (QXAAD)
 
+## Project Scope
+In this project, we are going to build a website for merchants to sell products. On this website, users would be able to search, view and purchase products, the merchant would be able to post products, accept orders, and monitor sales. The website would support user management, merchant management, product management and administration.
+In this project, we are going to use React.js to build the frontend and Flask as the backend server. We are going to use gradle as a build tool and github actions as CI/CD platform. We plan to use docker container to test and deploy our work.\
+Our team would use Github projects to organize our development and we are going to follow an agile workflow. We are to hold weekly sprints and conduct daily scrums to make sure the project is on the right track.
+
+## Project tools
+Flask, Python, Heroku, Postman, Next.js, Javascript, Postgresql
+
+
+
+
+
+## Project Architecture
+![arch](https://user-images.githubusercontent.com/45773808/115894565-a6d2ca00-a416-11eb-88e5-153904d37d94.PNG)
+
+
 
 ## Link to live app
 [Our web app](https://csci5828app.herokuapp.com/)
