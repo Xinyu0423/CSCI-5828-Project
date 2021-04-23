@@ -14,7 +14,7 @@ In this project, we are going to use React.js to build the frontend and Flask as
 Our team would use Github projects to organize our development and we are going to follow an agile workflow. We are to hold weekly sprints and conduct daily scrums to make sure the project is on the right track.
 
 ## Project tools
-Flask, Python, Heroku, Postman, Next.js, Javascript, Postgresql
+Flask, Python, Heroku, Postman, Next.js, Javascript, Postgresql, Docker
 
 
 
