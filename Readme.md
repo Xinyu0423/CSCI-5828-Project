@@ -19,7 +19,7 @@ Our team would use Github projects to organize our development and we are going 
 Ange Ishimwe, Qiuyang Wang, Xinyu Jiang, Duanfeng Gao, Ann Marie Mahon
 
 ## Project tools
-Flask, Python, Heroku, Postman, Next.js, Javascript, Postgresql, Docker
+Flask, Python, Heroku, Postman, Next.js, Javascript, Postgresql, Docker, Nginx
 
 
 
