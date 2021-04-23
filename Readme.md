@@ -13,6 +13,11 @@ In this project, we are going to build a website for merchants to sell products.
 In this project, we are going to use React.js to build the frontend and Flask as the backend server. We are going to use gradle as a build tool and github actions as CI/CD platform. We plan to use docker container to test and deploy our work.\
 Our team would use Github projects to organize our development and we are going to follow an agile workflow. We are to hold weekly sprints and conduct daily scrums to make sure the project is on the right track.
 
+
+
+## Team members:
+Ange Ishimwe, Qiuyang Wang, Xinyu Jiang, Duanfeng Gao, Ann Marie Mahon
+
 ## Project tools
 Flask, Python, Heroku, Postman, Next.js, Javascript, Postgresql, Docker
 
@@ -28,41 +33,43 @@ Flask, Python, Heroku, Postman, Next.js, Javascript, Postgresql, Docker
 ## Link to live app
 [Our web app](https://csci5828app.herokuapp.com/)
 
-## Prerequisites
+## Instruction on running the app
+
+### Prerequisites
 
 pipenv
 
-## Organization
-### /api
+### Organization
+#### /api
 Flask server
 
-### /app
+#### /app
 Frontend built with Next.js
 
-### /nginx
+#### /nginx
 Nginx proxy server  
 
-## Environments
+### Environments
 
-## Gradle tasks
+#### Gradle tasks
 Several gradle tasks are implemented for development and buiding. 
-### ./gradlew clean
+#### ./gradlew clean
 Clean all built files
-### ./gradlew clear
+#### ./gradlew clear
 Clean all temporary files, including local packages
-### ./gradlew setup
+#### ./gradlew setup
 Install all required packages and setup environments
-### ./gradlew build
+#### ./gradlew build
 Build the code
-### ./gradlew dockerComposeUp
+#### ./gradlew dockerComposeUp
 Build docker image
 
-### ./gradlew dockerComposeDown
+#### ./gradlew dockerComposeDown
 Build docker image
-### ./gradlew test
+#### ./gradlew test
 Run tests
 
-### testing instructions
+#### testing instructions
 cd app\
 npm install\
 npm run build\
@@ -70,15 +77,12 @@ npm run dev  (for testing)\
 npm run start  
 
 
-## Our development github repo can be found here:
+### Our development github repo can be found here:
 [QXAAD Dev repo](https://github.com/kevgao/csci5828/tree/dev)
 
-## Used api sources:
+### Used api sources:
 [Github trending repo](https://www.npmjs.com/package/trending-github)
 [Random image](https://source.unsplash.com/)
 
 
-
-## Team members:
-Ange Ishimwe, Qiuyang Wang, Xinyu Jiang, Duanfeng Gao, Ann Marie Mahon
 
